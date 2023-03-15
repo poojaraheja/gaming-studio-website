@@ -1,0 +1,379 @@
+.input-group1 {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+}
+
+.input-field {
+	width: 88%;
+	border-radius: 5px;
+	padding: 5px;
+	border: 1px solid grey;
+}
+
+.input-field1 {
+	border-radius: 5px;
+	padding: 5px;
+	margin-right: 7px;
+	width: 21%;
+	border: 1px solid grey;
+}
+
+.input-field2 {
+	border-radius: 5px;
+	padding: 5px;
+	width: 65%;
+	border: 1px solid grey;
+}
+
+.input-field:focus {
+	border: 2px solid skyblue;
+}
+
+.talk-button {
+	margin: 35px;
+	color: aliceblue;
+	background-color: #881e5c;
+	display: block;
+	padding: 10px;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
+
+label {
+	margin-right: auto;
+	margin-left: 38px;
+}
+
+@media (max-width: 400px) {
+	label {
+		margin-left: 20px;
+	}
+
+	.image.mmo-feature-image {
+		height: 1118px;
+	}
+}
+
+@media (max-width: 768px) {
+	.text-large {
+		font-size: 15px;
+	}
+	.image.mmo-feature-image {
+		height: 1000px;
+	}
+
+	.main-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.left-container,
+	.right-container {
+		width: 100% !important;
+	}
+	.style3 {
+		width: 90%;
+	}
+}
+
+.three-img {
+	width: 560px;
+	height: 500px;
+}
+
+.awards-images {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (max-width: 550px) {
+	.awards-images {
+		flex-direction: column;
+	}
+	.awards-images-item {
+		margin-top: 25px;
+	}
+	.mmo-slide-media {
+		width: 332px;
+	}
+
+	.four-images {
+		width: 332px;
+	}
+}
+
+/* @media screen and (max-width: 768px) {
+	.mmo-slide-media {
+		width: 556px;
+	}
+
+	.four-images {
+		width: 556px;
+	}
+} */
+
+.main-container {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.right-container {
+	width: 40%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.left-container {
+	width: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+/* # The Rotating Marker # */
+details summary::-webkit-details-marker {
+	display: none;
+}
+summary::before {
+	font-family: "Hiragino Mincho ProN", "Open Sans", sans-serif;
+	content: "▶";
+	position: absolute;
+	top: 1rem;
+	left: 0.8rem;
+	transform: rotate(0);
+	transform-origin: center;
+	transition: 0.2s transform ease;
+}
+details[open] > summary:before {
+	transform: rotate(90deg);
+	transition: 0.45s transform ease;
+}
+
+/* # The Sliding Summary # */
+details {
+	overflow: hidden;
+}
+details summary {
+	position: relative;
+	z-index: 10;
+}
+@keyframes details-show {
+	from {
+		margin-bottom: -80%;
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+}
+details > *:not(summary) {
+	animation: details-show 500ms ease-in-out;
+	position: relative;
+	z-index: 1;
+	transition: all 0.3s ease-in-out;
+	color: transparent;
+	overflow: hidden;
+}
+details[open] > *:not(summary) {
+	color: inherit;
+}
+
+/* # Style 2 # */
+
+/* # Style 3 # */
+details.style3 summary::before {
+	content: "›";
+	font-size: 2.5rem;
+	line-height: 1rem;
+	top: 1.3rem;
+	left: 0rem;
+	margin: -0.5rem -0.5rem 0 0.5rem;
+	transform-origin: bottom center;
+	transition: margin linear 0.05s;
+}
+details.style3:hover > summary:before {
+	color: #fff;
+}
+details[open].style3 > summary:before {
+	left: 0rem;
+	color: #ccc;
+	transform: rotate(90deg);
+	margin-left: 0.4rem;
+	transition: color ease 2s, transform ease 1s, margin ease 1s;
+}
+@supports (-webkit-touch-callout: none) {
+	details.style3 summary::before {
+		top: 1.6rem;
+	}
+	details[open].style3 > summary:before {
+		top: 1.3rem;
+		transition: all 0.8s;
+	}
+}
+
+/* # Just Some Pretty Styles # */
+body {
+	font-family: "Open Sans", sans-serif;
+	/* padding-bottom: 400px; */
+}
+img {
+	max-width: 100%;
+}
+p {
+	margin: 0;
+	padding-bottom: 10px;
+}
+p:last-child {
+	padding: 0;
+}
+details {
+	/* max-width: 500px; */
+	box-sizing: border-box;
+	margin-top: 5px;
+	background: transparent;
+	border-radius: 30px;
+	border: 1px solid white;
+	color: #fff;
+	margin: 10px 0px 10px 0;
+	width: 85%;
+	font-size: small;
+}
+summary {
+	border: 4px solid transparent;
+	outline: none;
+	padding: 1rem;
+	display: block;
+	background: #ff5d23;
+	color: white;
+	padding-left: 2.2rem;
+	position: relative;
+	cursor: pointer;
+	font-size: small;
+}
+details[open] summary,
+summary:hover {
+	color: #14120c;
+	background: #ff5d23;
+}
+summary:hover strong,
+details[open] summary strong,
+summary:hover::before,
+details[open] summary::before {
+	color: transparent;
+}
+.content {
+	padding: 10px;
+
+	border-top: none;
+}
+
+.divider {
+	/* background-color: rgba(242, 243, 245, 0.07); */
+	color: #fff;
+	display: flex;
+}
+
+.reveal {
+	position: relative;
+	transform: translateY(150px);
+	opacity: 0;
+	transition: 1s all ease;
+}
+
+.reveal.active {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.map-container {
+	width: 25%;
+	display: flex;
+
+	background-image: url("Last.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.info-container {
+	width: 75%;
+}
+.service-container {
+	margin: 20px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.bottom-three {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.address {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.newsletter {
+	display: flex;
+	flex-direction: column;
+}
+
+.contact {
+	display: flex;
+	margin: 10px;
+}
+
+.subscribe {
+	display: flex;
+	margin: 10px;
+	justify-content: space-evenly;
+}
+.btn {
+	width: 22%;
+	height: 43px;
+	margin: 10px;
+	color: white;
+	border-radius: 6px;
+	background-color: #ff5d23;
+}
+@media screen and (max-width: 768px) {
+	.divider,
+	.info-container,
+	.service-container,
+	.bottom-three,
+	.address,
+	.contact,
+	.subscribe {
+		width: 100%;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+	.map-container {
+		width: 100%;
+		aspect-ratio: 1;
+	}
+	.btn {
+		margin: auto;
+		width: 40%;
+	}
+
+	.service-container,
+	.left-service,
+	.right-service {
+		width: 100%;
+	}
+	.service-container,
+	.contact {
+		margin: 0;
+		margin-bottom: 10px;
+	}
+	.footer {
+		font-size: xx-small;
+	}
+}
